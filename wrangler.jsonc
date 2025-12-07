@@ -13,6 +13,9 @@
 	"observability": {
 		"enabled": true
 	}
+	"vars": {
+		"CLOUDFLARE_API_TOKEN": "cJadxUBgP9QoHV8pRtku55501fKYHZM1L3PgtgRe"
+	}
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
