@@ -6,9 +6,9 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "npm run build && wrangler pages dev",
+		"preview": "npm run build && npx wrangler pages dev",
 		"prepare": "svelte-kit sync || echo ''",
-		"deploy": "npm run build && wrangler pages deploy"
+		"deploy": "npm run build && npx wrangler pages deploy"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.0",
