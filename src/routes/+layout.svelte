@@ -16,7 +16,12 @@
 
 <style>
 	:global(html) {
+		height: 100%;
 		background-color: black;
 		color: white;
+	}
+
+	:global(body) {
+		height: 100%;
 	}
 </style>

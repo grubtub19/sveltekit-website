@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-cloudflare";
 import { mdsvex } from 'mdsvex';
+import relativeImages from "mdsvex-relative-images";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,7 +10,10 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter() 
 	},
-	preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
+	preprocess: [mdsvex({ 
+		remarkPlugins: [relativeImages],
+		extensions: ['.svx', '.md'] })
+	],
 	extensions: [".svelte", ".svx", ".md"]
 };
 
