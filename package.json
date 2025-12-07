@@ -1,0 +1,22 @@
+{
+	"name": "svelte-website",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "npm run build && wrangler pages dev",
+		"prepare": "svelte-kit sync || echo ''",
+		"deploy": "npm run build && wrangler pages deploy"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/adapter-cloudflare": "^7.2.4",
+		"@sveltejs/kit": "^2.48.5",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"svelte": "^5.43.8",
+		"vite": "^7.2.2",
+		"wrangler": "^4.53.0"
+	}
+}
