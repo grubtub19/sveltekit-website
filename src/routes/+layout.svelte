@@ -9,16 +9,18 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-
 {@render children()}
 
 <Kitty />
 
 <style>
+	@import '$lib/css/fonts.css';
+
 	:global(html) {
 		height: 100%;
 		background-color: black;
 		color: white;
+		font-family: "Bytesized", sans-serif;
 	}
 
 	:global(body) {
