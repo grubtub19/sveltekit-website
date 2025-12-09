@@ -3,4 +3,4 @@
 
 <a href="/blog">Blog</a>
 
-<p><small>hi erin</small></p>
+<p><small>hi ciel</small></p>
