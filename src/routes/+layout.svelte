@@ -20,10 +20,11 @@
 		height: 100%;
 		background-color: black;
 		color: white;
-		font-family: "Bytesized", sans-serif;
+		font-family: "Hiragino Maru Gothic Pro", sans-serif;
 	}
 
 	:global(body) {
+		overflow: auto;
 		height: 100%;
 	}
 </style>

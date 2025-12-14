@@ -2,3 +2,8 @@
     font-family: LumineSign;
     src: url('/fonts/LumineSign.TTF');
 }
+
+@font-face {
+    font-family: Hiragino Maru Gothic Pro;
+    src: url('/fonts/ヒラギノ丸ゴ ProN W4.ttc');
+}
