@@ -18,6 +18,8 @@ Today was the last day of the Kei Mochizuki exhibition. And sure, I had the noro
 ![The main mural at the Kei Mochizuki exhibition]($lib/assets/blog/3-kei6.png)
 ![The main mural at the Kei Mochizuki exhibition]($lib/assets/blog/3-kei8.png)
 
+See https://photos.app.goo.gl/cWULZTZYriyfJ2pY8 for the full album!
+
 The gallery was so beautiful, I could stop smiling the whole way through. Halfway in, the artist left this message:
 
 ![Kei Mochizuki's message]($lib/assets/blog/3-kei9.png)
