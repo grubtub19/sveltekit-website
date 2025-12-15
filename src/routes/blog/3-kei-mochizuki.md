@@ -24,7 +24,7 @@ The gallery was so beautiful, I could stop smiling the whole way through. Halfwa
 
 ![Kei Mochizuki's message]($lib/assets/blog/3-kei9.png)
 
-Her words resonated with me; I couldn't help but cry. I often conceptualize my life through the lense of the artistic and aesthetic. I believe the meaning of my life is to create: to carve out of reality something uniquely me. So to read these words from an artist I draw so much personal aesthetic inspiration from? It means more to me than my poor creative writing skills could ever describe :p
+Her words resonated with me; I couldn't help but cry. I often conceptualize my life through the lense of the artistic and aesthetic. I believe the meaning of my life is to create: to carve out of reality something uniquely me. So to read these words from an artist I draw so much inspiration from already.. It means more to me than my poor creative writing skills could ever describe :p
 
 There's nowhere I would rather be than here <small>There's no one I'd rather be than me</small>
 
