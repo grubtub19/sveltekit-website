@@ -27,4 +27,8 @@
 		overflow: auto;
 		height: 100%;
 	}
+
+	:global(h1){
+		color: #2CFF05;
+	}
 </style>
