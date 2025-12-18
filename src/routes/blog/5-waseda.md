@@ -1,6 +1,7 @@
 ---
 title: "Japan Day 5: Waseda"
 date: 2025-12-17
+img: "5-waseda4"
 ---
 
 Today was a lonely day and I liked it that way. I took pictures at the Tokyo Metropolitan Government Building, went camera shopping in Shinjuku, and took an emotional walk through my old university campus.
