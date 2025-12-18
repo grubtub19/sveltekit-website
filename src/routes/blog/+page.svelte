@@ -6,31 +6,50 @@
 
 <h1>All Blog Posts</h1>
 
-<ul>
-  {#each data.posts as post (post.slug)}
-    <li>
+<div class="blog-list">
+{#each data.posts as post (post.slug)}
+  <a href={`/blog/${post.slug}`} class="blog-item">
+    {#if post.img}
+      {#await import(`$lib/assets/blog/${post.img}.png`) then { default: src }}
+        <img class="blog-image" {src} alt={post.title || 'Untitled Post'} />
+      {/await}
+    {/if}
+    <p class="blog-text">
       <!-- Links point to the URL handled by src/routes/blog/[slug]/+page.js -->
-      <a href={`/blog/${post.slug}`}>
         {post.title || 'Untitled Post'}
-      </a>
       {#if post.date}
-        <p><small>{new Date(post.date).toLocaleDateString()}</small></p>
+        <small>{new Date(post.date).toLocaleDateString()}</small>
       {/if}
-      {#if post.img}
-        {#await import(`$lib/assets/blog/${post.img}.png`) then { default: src }}
-          <img {src} alt={post.title || 'Untitled Post'} />
-        {/await}
-      {/if}
-    </li>
-  {/each}
-</ul>
+    </p>
+  </a>
+{/each}
+</div>
 
 <style>
-    img {
-        max-height: 200px;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
+  .blog-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .blog-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border: green 2px solid;
+    flex-grow: 0;
+  }
+
+  .blog-image {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .blog-text {
+    padding: 1rem;
+    margin: 0;
+  }
 </style>
