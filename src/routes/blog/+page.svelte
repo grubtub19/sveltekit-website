@@ -2,6 +2,8 @@
 // TODO: I straight up vibecoded this so maybe do this myself in the future.
   // SvelteKit automatically passes the 'posts' array from +page.js
   export let data;
+  // Disable date for now until I make it pretty.
+  let date = false;
 </script>
 
 <h1>All Blog Posts</h1>
@@ -16,9 +18,9 @@
     {/if}
     <p class="blog-text">
       <!-- Links point to the URL handled by src/routes/blog/[slug]/+page.js -->
-        {post.title || 'Untitled Post'}
-      {#if post.date}
-        <small>{new Date(post.date).toLocaleDateString()}</small>
+      {post.title || 'Untitled Post'}
+      {#if post.date && date}
+        <big>{new Date(post.date).toLocaleDateString()}</big>
       {/if}
     </p>
   </a>
