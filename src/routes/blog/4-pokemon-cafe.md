@@ -28,7 +28,7 @@ After a brief pitstop home, I took the train to Mimatsu tobacco in Akihabara to 
 
 I bought a pack of Mevius Option Purple 1 and Pianissimo Peach Mint.
 
-It's illegal to smoke in non-designated areas in the city, but I couldn't find any on my walk home :(
+You can only smoke it designated areas here, but I couldn't find any on the way home so :(
 
 Goodnight
 
