@@ -7,14 +7,14 @@ Today was a lonely day and I liked it that way. I took pictures at the Tokyo Met
 
 # Pretty Pictures wow ~~
 
-I woke up last, so it was already approaching golden hour on my way to the Tokyo Metropolitan Government Building Observation Deck.
+I woke up late, so it was already approaching golden hour on my way to the Tokyo Metropolitan Government Building Observation Deck.
 
 ![A street shot from a padestrian overpass]($lib/assets/blog/5-buildings.png)
 ![The Tokyo Metropolitan Government Building]($lib/assets/blog/5-buildings2.png)
 ![A glass handrail inside the Tokyo Metropolitan Government Building reflecting a bright fascade from outside]($lib/assets/blog/5-buildings3.png)
 ![A green stoplight]($lib/assets/blog/5-buildings4.png)
 
-I took the elevator up to the 45th floor and the view was beautiful! When I lived here, I'd only been to an observation deck at night, so this was a new experience!
+I took the elevator up to the 45th floor, and the view was beautiful! When I lived here, I'd only been to this observation deck at night, so this was a new experience!
 
 ![Selfie from the observation deck]($lib/assets/blog/5-sky.png)
 ![Skytree in the distance]($lib/assets/blog/5-sky2.png)
@@ -24,11 +24,11 @@ I took the elevator up to the 45th floor and the view was beautiful! When I live
 ![A building named The Knot]($lib/assets/blog/5-sky6.png)
 ![The building right nextdoor]($lib/assets/blog/5-sky7.png)
 
-I'm really proud of how these shots came out. I've been experimenting a lot more with angled shots and I think I nailed it today!
+I've been experimenting a lot more with angled shots and I think I nailed it today!
 
 # Fujifilm X-T50 (Silver)
 
-I've been wanting to buy a real camera for a long time, so while I'm in Shinjuku since it's known for it's camera stores. Took me a while to find it in silver. big W for valorant!!
+Shinjuku is known for it's camera stores, so I thought it was the perfect place to find the camera I've been meaning to buy. I bought the Fujifilm X-T50 in Silver. It's got a 40MB sensor and good film simulation, so it's everything I've ever dreamed of. big W for valorant!!
 
 ![Val in a mirror at BicCamera]($lib/assets/blog/5-camera.png)
 ![Map Camera on every floor]($lib/assets/blog/5-camera2.png)
@@ -67,9 +67,9 @@ I got this really pretty shot of some decoration in the subway on the way home.
 
 # Maybe it's okay to be lonely
 
-I was looking forward to a day like this because I wanted to see how it would make me feel. Being a social person has been a pretty recent development. Epecially in the last year, it's become almost a defining trait for me. But looking back, a lot of my relationships were formed to validate my pathetic insecure needy existence. She just couldn't stop people pleasing others until everyone around her got hurt and she got hurt and she broke her heart and her heart got broken and she had a mental break on Pier 61 at 3am.
+I was looking forward to a day like this because I wanted to see how it would make me feel. Being a social person has been a pretty recent development. Especially in the last year, it's become almost a defining trait for me. But looking back, a lot of my relationships were formed to validate my pathetic insecure needy existence. Lil ol' valorant gaming people pleased too close to the sun until everyone around her got hurt and she got hurt and she broke her heart and her heart got broken and she had a mental break on Pier 61 at 3am.
 
-So maybe it's okay to feel lonely.  because it's better than feeling all that.
+So maybe it's okay to feel lonely.  because it's better than feeling all that.  all it takes is a little self respect.
 
 <style>
     img {
