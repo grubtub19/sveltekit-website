@@ -70,14 +70,4 @@ I got this really pretty shot of some decoration in the subway on the way home.
 
 I was looking forward to a day like this because I wanted to see how it would make me feel. Being a social person has been a pretty recent development. Especially in the last year, it's become almost a defining trait for me. But looking back, a lot of my relationships were formed to validate my pathetic insecure needy existence. Lil ol' valorant gaming people pleased too close to the sun until everyone around her got hurt and she got hurt and she broke her heart and her heart got broken and she had a mental break on Pier 61 at 3am.
 
-So maybe it's okay to feel lonely.  because it's better than feeling all that.  all it takes is a little self respect.
-
-<style>
-    img {
-        max-height: 600px;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-</style>
+So maybe it's okay to feel lonely.  because it's better than feeling all that.  it just takes is a little self respect.

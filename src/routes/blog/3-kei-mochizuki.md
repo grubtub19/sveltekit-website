@@ -30,14 +30,6 @@ Her words resonated with me; I couldn't help but cry. I often conceptualize my l
 There's nowhere I would rather be than here <small>There's no one I'd rather be than me</small>
 
 <style>
-    img {
-        max-height: 600px;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-
     img[alt="Kei Mochizuki's message"] {
         max-height: 1000px;
     }

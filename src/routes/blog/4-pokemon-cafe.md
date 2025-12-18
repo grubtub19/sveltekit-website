@@ -32,13 +32,3 @@ I bought a pack of Mevius Option Purple 1 and Pianissimo Peach Mint.
 You can only smoke it designated areas here, but I couldn't find any on the way home so :(
 
 Goodnight
-
-<style>
-    img {
-        max-height: 600px;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-</style>
