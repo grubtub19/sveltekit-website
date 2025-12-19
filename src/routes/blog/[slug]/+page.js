@@ -1,5 +1,8 @@
 export async function load({ params }) {
 	const post = await import(`../${params.slug}.md`);
+	if (!post.metadata) {
+		throw new Error('Post metadata not found');
+	}
 	const { title, date } = post.metadata;
 	const content = post.default;
 

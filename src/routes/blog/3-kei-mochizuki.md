@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 3: Norovirus & Kei Mochizuki Exhibition"
 date: 2025-12-15
-img: "3-kei"
+img: "$lib/assets/blog/3-kei.png"
 ---
 
 When I lived in Tokyo, I had the opportunity to see solo exhibitions from artists that I had followed for years. It was a lot easier then because these events only get announced at most a month ahead of time, so it's *really* lucky that my literal top two favorite artists are both having exhibitions in Tokyo at the same time: Kei Mochizuki (https://twitter.com/key_999) and Yoneyama Mai (https://twitter.com/yoneyamai).

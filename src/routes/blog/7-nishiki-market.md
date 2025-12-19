@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 7: Nishiki Market"
 date: 2025-12-19
-img: "7-nishiki3"
+img: "$lib/assets/blog/7-nishiki3.png"
 ---
 
 # Blogging is soul sucking work so you better be happy

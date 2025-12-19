@@ -1,5 +1,7 @@
 //TODO: I straight up vibecoded this so maybe do this myself in the future.
 
+import { resolveBlogImage } from '$lib/utils/images';
+
 // This glob specifically looks for .md files in the current directory, 
 // excluding any special SvelteKit files if they exist (though we filter below).
 const modules = import.meta.glob('./*.md', { eager: true });
@@ -18,7 +20,8 @@ export async function load() {
 
     return {
       slug,
-      ...metadata, // Contains title, date, etc.
+      ...metadata, // Contains title, date, img, etc.
+      img: resolveBlogImage(metadata.img)
     };
   });
 

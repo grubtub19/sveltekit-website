@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 4: Pokemon Cafe & Smokes"
 date: 2025-12-16
-img: "4-pokemon"
+img: "$lib/assets/blog/4-pokemon.png"
 ---
 
 Today is our reservation for the Pokemon Cafe, so we headed over to Nihonbashi beforehand to look around. We only had time to wander the rooftop of the building and check out the gift shop before getting seated.

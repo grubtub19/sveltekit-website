@@ -1,0 +1,1 @@
+<enhanced:img src="$lib/assets/blog/7-nishiki3.png" alt= "The tops of a few buildings, centered on a white staircase" />

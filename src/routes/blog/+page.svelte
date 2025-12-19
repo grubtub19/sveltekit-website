@@ -12,9 +12,7 @@
 {#each data.posts as post (post.slug)}
   <a href={`/blog/${post.slug}`} class="blog-item">
     {#if post.img}
-      {#await import(`$lib/assets/blog/${post.img}.png`) then { default: src }}
-        <img class="blog-image" {src} alt={post.title || 'Untitled Post'} />
-      {/await}
+      <enhanced:img class="blog-image" src={post.img} alt={post.title || 'Untitled Post'} />
     {/if}
     <p class="blog-text">
       <!-- Links point to the URL handled by src/routes/blog/[slug]/+page.js -->

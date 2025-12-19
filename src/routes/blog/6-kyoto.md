@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 6: Kyoto"
 date: 2025-12-18
-img: "6-station2"
+img: "$lib/assets/blog/6-station2.png"
 ---
 
 Took the day to travel to Kyoto. Took the shinkansen, explored Kyoto Station, and got cucked on my hotel again :smile:
