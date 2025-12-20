@@ -31,8 +31,4 @@
 	:global(h1) {
 		color: #2cff05;
 	}
-
-	:global(img) {
-		display: block;
-	}
 </style>

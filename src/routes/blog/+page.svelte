@@ -48,6 +48,7 @@
   }
 
   .blog-image {
+    display: block;
     max-width: 300px;
     height: auto;
   }
