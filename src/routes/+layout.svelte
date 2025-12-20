@@ -1,6 +1,6 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
-	import Kitty from '$lib/components/kitty.svelte';
+	import favicon from "$lib/assets/favicon.svg";
+	import Kitty from "$lib/components/kitty.svelte";
 
 	let { children } = $props();
 </script>
@@ -14,7 +14,7 @@
 <Kitty />
 
 <style>
-	@import '$lib/css/fonts.css';
+	@import "$lib/css/fonts.css";
 
 	:global(html) {
 		height: 100%;
@@ -28,7 +28,11 @@
 		height: 100%;
 	}
 
-	:global(h1){
-		color: #2CFF05;
+	:global(h1) {
+		color: #2cff05;
+	}
+
+	:global(img) {
+		display: block;
 	}
 </style>
