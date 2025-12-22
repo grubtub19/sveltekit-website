@@ -1,6 +1,8 @@
 <script>
 	import favicon from "$lib/assets/favicon.svg";
-	import Kitty from "$lib/components/kitty.svelte";
+	import kitty from "$lib/assets/kitty.png";
+	import PeekyElement from "$lib/components/PeekyElement.svelte";
+	import { cubicOut } from "svelte/easing";
 
 	let { children } = $props();
 </script>
@@ -11,10 +13,34 @@
 
 {@render children()}
 
-<Kitty />
+<div class="kitty-container">
+	<PeekyElement
+		duration={200}
+		direction="bottom-left"
+		distance={100}
+		rotation={-60}
+		easing={cubicOut}
+	>
+		<img src={kitty} alt="Glorp is curious!" class="kitty" />
+	</PeekyElement>
+</div>
 
 <style>
 	@import "$lib/css/fonts.css";
+
+	.kitty-container {
+		position: fixed;
+		bottom: -6px;
+		left: -18px;
+		z-index: 1000;
+		transform-origin: 50% 50%;
+	}
+
+	.kitty {
+		width: 150px;
+		display: block;
+		rotate: 8deg;
+	}
 
 	:global(html) {
 		height: 100%;

@@ -28,7 +28,7 @@
 
 <style>
     :global(img) {
-        max-height: 600px;
+        max-height: 400px;
         max-width: 100%;
         width: auto;
         height: auto;
