@@ -2,6 +2,7 @@
 	import favicon from "$lib/assets/favicon.svg";
 	import kitty from "$lib/assets/kitty.png";
 	import PeekyElement from "$lib/components/PeekyElement.svelte";
+	import { peek } from "$lib/transitions/peek-transitions";
 	import { cubicOut } from "svelte/easing";
 
 	let { children } = $props();
@@ -15,6 +16,7 @@
 
 <div class="kitty-container">
 	<PeekyElement
+		transitionFn={peek}
 		duration={200}
 		direction="bottom-left"
 		distance={100}
