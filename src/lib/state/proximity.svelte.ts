@@ -45,7 +45,7 @@ export class ProximityState {
 		// -- Passive Container Tracking --
         // We want to update the #bounds whenever the container's position or size changes.
         // Rather than call getBoundingClientRect() continuously (which requires layout recalculation),
-        // we use observers and event listeners to recalculate only when the layout has been computed.
+        // we use observers and event listeners to recalculate only when the layout has already been computed.
         // This allows getBoundingClientRect() to use cached layout information rather than forcing a reflow.
         // TODO: Make this a singleton to avoid duplicate observers for each instance.
 		$effect(() => {
