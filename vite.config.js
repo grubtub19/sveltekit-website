@@ -11,5 +11,11 @@ export default defineConfig({
 		__BLOG_FILE__: '"index"',  // .md
 		// The root folder name for all blog posts. Since we can't directly query $blog for this.
 		__BLOG_ROOT__: '"blog"',
+	},
+	server: {
+		fs: {
+			// Allowlist the content directory for serving
+			allow: ['content']
+		}
 	}
 });

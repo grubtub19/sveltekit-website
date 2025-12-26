@@ -11,9 +11,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			// LINT.IfChange
-			$blog: 'src/lib/blog'
-			// LINT.ThenChange(path/to/other/file.dart)
+			$blog: 'content/blog'
 		}
 	},
 	preprocess: [vitePreprocess(), mdsvex({ 

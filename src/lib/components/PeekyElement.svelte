@@ -1,6 +1,6 @@
 <script lang="ts">
     import { peek } from "$lib/transitions/peek-transitions";
-    import { ProximityState } from "$lib/state/proximity.svelte";
+    import { ProximityDetection } from "$lib/state/proximity.svelte";
     import type { Snippet } from "svelte";
 
     let {
@@ -16,7 +16,7 @@
     } = $props();
 
     // svelte-ignore state_referenced_locally
-    const prox = new ProximityState(threshold);
+    const prox = new ProximityDetection(threshold);
 
     // Propagate threshold changes
     // Using pre to ensure threshold changes have immediate effects on proximity calculations before the DOM is updated.
