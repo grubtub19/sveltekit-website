@@ -1,7 +1,6 @@
 const postModules = import.meta.glob('$blog/**/*.md', { eager: true });
 const imageModules = import.meta.glob('$blog/**/*.{png,PNG,webp,WEBP,webm,WEBM,jpg,JPG}', { 
-    eager: true, 
-    query: { enhanced: true } 
+    eager: true
 });
 
 export interface PostMetadata {

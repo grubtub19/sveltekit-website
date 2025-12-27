@@ -8,7 +8,7 @@
   {#each data.posts as post (post.id)}
     <a href="/blog/{post.slug}" class="blog-item">
       {#if post.image}
-        <enhanced:img class="blog-image" src={post.image} alt={post.title} />
+        <img class="blog-image" src={post.image} alt={post.title} />
       {:else}
         <div class="placeholder">No Image</div>
       {/if}

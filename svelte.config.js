@@ -15,24 +15,8 @@ const config = {
 		}
 	},
 	preprocess: [vitePreprocess(), mdsvex({ 
-		remarkPlugins: [[
-			relativeImages,
-			{
-					// Optional: attributes to add to **all** `img` tags
-					attributes: {
-						fetchpriority: "auto", // browser's default
-						loading: "eager", // browser's default
-						decoding: "auto", // browser's default
-						class: "test-decoration test-shadow" // add classes to all images
-					},
-					// Optional: imagetools directives to add to **all** `img` tags
-					// see https://github.com/JonasKruckenberg/imagetools/blob/main/docs/directives.md#format
-					imagetoolsDirectives:{
-						// tint: "rgb(10,33,127)",
-						// blur: 10,
-					}
-				}
-		]
+		remarkPlugins: [
+			relativeImages
 		],
 		extensions: ['.svx', '.md'] })
 	],
