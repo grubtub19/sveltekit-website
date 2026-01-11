@@ -1,5 +1,5 @@
 ---
-title: "Japan Day 12: #teamnosleep"
+title: "Japan Day 12+13: #teamnosleep"
 date: 2025-12-24
 img: "./mcd.png"
 ---
@@ -18,4 +18,4 @@ In other news, McDonalds here is weird af. Would not recommend the shrimp burger
 
 Also they just have Brooklyn Brewery here super casually and it's like in every konbini ever.
 
-![Brooklyn Brewery Defender IPA](beer.png)
+![Brooklyn Brewery Defender IPA](./beer.png)
