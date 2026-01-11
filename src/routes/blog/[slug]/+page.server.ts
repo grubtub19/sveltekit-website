@@ -1,5 +1,6 @@
 import { error, redirect } from '@sveltejs/kit';
 import { blogRegistry } from '$lib/utils/post-registry';
+import { render } from 'svelte/server';
 
 export async function load({ params }) {
     const { slug } = params;
@@ -11,16 +12,18 @@ export async function load({ params }) {
 
     if (!post) throw error(404, 'Post not found');
 
-    // Canonical redirect (e.g., /blog/001 -> /blog/001-japan)
     if (slug !== post.slug) {
         throw redirect(301, `/blog/${post.slug}`);
     }
 
+    // Import the markdown module
+    const module = await import(`$blog/${post.folderName}/index.md`);
+    
+    // Render the Svelte component to HTML on the server
+    const { body } = render(module.default);
+
     return {
-        metadata: {
-            title: post.title,
-            date: post.date
-        },
-        folderName: post.folderName
+        metadata: { title: post.title, date: post.date },
+        content: body  // Pass rendered HTML string (serializable)
     };
 }

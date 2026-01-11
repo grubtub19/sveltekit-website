@@ -51,6 +51,8 @@
     display: block;
     max-width: 300px;
     height: auto;
+    object-fit: cover;
+    aspect-ratio: 1;
   }
 
   .blog-text {

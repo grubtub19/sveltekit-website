@@ -28,6 +28,7 @@ for (const path in postModules) {
     const id = parseInt(idMatch[1], 10);
 
     let resolvedImage = null;
+    console.log("path: " + path)
     if (metadata.img) {
         const imageFileName = metadata.img.replace('./', '');
         
