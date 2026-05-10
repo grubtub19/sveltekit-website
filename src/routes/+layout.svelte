@@ -14,7 +14,7 @@
 
 {@render children()}
 
-<div class="kitty-container">
+<div class="glorp bottom left">
 	<PeekyElement
 		transitionFn={peek}
 		duration={200}
@@ -23,25 +23,42 @@
 		rotation={-60}
 		easing={cubicOut}
 	>
-		<img src={kitty} alt="Glorp is curious!" class="kitty" />
+		<img class="kitty" src={kitty} alt="Glorp is curious!" />
+	</PeekyElement>
+</div>
+<div class="glorp bottom right">
+	<PeekyElement
+		transitionFn={peek}
+		duration={200}
+		direction="bottom-right"
+		distance={100}
+		rotation={60}
+		easing={cubicOut}
+	>
+		<img class="kitty" src={kitty} alt="Glorp is curious!" />
 	</PeekyElement>
 </div>
 
 <style>
 	@import "$lib/css/fonts.css";
 
-	.kitty-container {
+	.glorp {
 		position: fixed;
-		bottom: -6px;
-		left: -18px;
 		z-index: 1000;
 		transform-origin: 50% 50%;
 	}
 
-	.kitty {
-		width: 150px;
-		display: block;
-		rotate: 8deg;
+	.bottom {
+		bottom: -6px;
+	}
+
+	.left {
+		left: -18px;
+	}
+
+	.right {
+		right: -18px;
+		transform: scaleX(-1);
 	}
 
 	:global(html) {
