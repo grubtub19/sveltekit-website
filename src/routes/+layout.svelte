@@ -54,11 +54,13 @@
 
 	.left {
 		left: -18px;
+		rotate: 8deg;
 	}
 
 	.right {
 		right: -18px;
 		transform: scaleX(-1);
+		rotate: -8deg;
 	}
 
 	:global(html) {
