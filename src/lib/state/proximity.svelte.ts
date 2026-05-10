@@ -1,6 +1,6 @@
 // src/lib/state/proximity.svelte.ts
 import { browser } from '$app/environment';
-import { SvelteMap } from 'svelte/reactivity';
+import { GlobalInputTracker } from './global-input-tracker';
 
 export class ProximityDetection {
 	// External Variables
@@ -8,6 +8,14 @@ export class ProximityDetection {
     container = $state<HTMLElement | null>(null);
 	// Proximity threshold multiplier (1 = element radius, 2 = double radius, etc.)
     threshold = $state(1);
+
+	#tracker = GlobalInputTracker.getInstance();
+
+	// Reference to the globally-tracked active points
+	get #activePoints() {
+		return this.#tracker.getActivePoints();
+	}
+
     // Whether the proximity detection is activated.
     isActive = $derived.by(() => {
 		// If we recently lifted a touch within the zone (and 
@@ -24,7 +32,8 @@ export class ProximityDetection {
 
     // We use a Reactive Map to track all active input points (Mouse + Multiple Fingers).
     // This avoids thrashing by updating specific IDs instead of re-creating arrays.
-    #activePoints = new SvelteMap<string | number, { x: number; y: number }>();
+    // NOTE: #activePoints is now sourced from the global tracker singleton to avoid
+    // maintaining duplicates across instances.
 	#isStickyActive = $state(false);
 
 	    // Internal state
@@ -47,25 +56,26 @@ export class ProximityDetection {
         // Early exit for SSR
         if (!browser) return;
 
-        // Global Input Tracking
+        // Initialize the global input tracker (idempotent - only sets up listeners once)
+        this.#tracker.initialize();
+
+        // Subscribe to global input events
         // Handles both Mouse (PointerEvents) and Touch (TouchEvents) to ensure
         // proximity works even when a drag starts outside the zone on mobile.
-        // TODO: Make this a singleton to avoid duplicate listeners for each instance.
         $effect(() => {
-			const handlePointerDown = (e: PointerEvent) => { 
+			const unsubPointerDown = this.#tracker.onPointerDown((e: PointerEvent) => {
 				// Clicks will stick or unstick the active state.
-                this.#isStickyActive = this.#isInProximityZone(e.clientX, e.clientY)
-            };
+                this.#isStickyActive = this.#isInProximityZone(e.clientX, e.clientY);
+            });
 
-            const handlePointerMove = (e: PointerEvent) => {
+            const unsubPointerMove = this.#tracker.onPointerMove((e: PointerEvent) => {
                 if (e.pointerType === 'mouse') {
                     // Reset the "stuck" state on any mouse movement
                     this.#isStickyActive = false;
-                    this.#activePoints.set('mouse', { x: e.clientX, y: e.clientY });
                 }
-            };
+            });
 
-			const handleTouchUpdate = (e: TouchEvent) => {
+			const unsubTouchUpdate = this.#tracker.onTouchUpdate((e: TouchEvent) => {
                 // Update or add every finger currently involved in this event.
                 for (let i = 0; i < e.changedTouches.length; i++) {
                     const touch = e.changedTouches[i];
@@ -73,12 +83,10 @@ export class ProximityDetection {
                     if (this.#isStickyActive && this.#isInProximityZone(touch.clientX, touch.clientY)) {
                         this.#isStickyActive = false;
                     }
-
-                    this.#activePoints.set(touch.identifier, { x: touch.clientX, y: touch.clientY });
                 }
-            };
+            });
 
-            const handleTouchRemove = (e: TouchEvent) => {
+            const unsubTouchRemove = this.#tracker.onTouchRemove((e: TouchEvent) => {
                 // Remove specific fingers as they leave the screen.
                 for (let i = 0; i < e.changedTouches.length; i++) {
                     const touch = e.changedTouches[i];
@@ -88,24 +96,14 @@ export class ProximityDetection {
 					if (point && this.#isInProximityZone(point.x, point.y)) {
                         this.#isStickyActive = true;
                     }
-                    this.#activePoints.delete(touch.identifier);
                 }
-            };
-
-			window.addEventListener('pointerdown', handlePointerDown, {passive: true });
-            window.addEventListener('pointermove', handlePointerMove, { passive: true });
-            window.addEventListener('touchstart', handleTouchUpdate, { passive: true });
-            window.addEventListener('touchmove', handleTouchUpdate, { passive: true });
-            window.addEventListener('touchend', handleTouchRemove, { passive: true });
-            window.addEventListener('touchcancel', handleTouchRemove, { passive: true });
+            });
 
             return () => {
-				window.removeEventListener('pointerdown', handlePointerDown);
-                window.removeEventListener('pointermove', handlePointerMove);
-                window.removeEventListener('touchstart', handleTouchUpdate);
-                window.removeEventListener('touchmove', handleTouchUpdate);
-                window.removeEventListener('touchend', handleTouchRemove);
-                window.removeEventListener('touchcancel', handleTouchRemove);
+				unsubPointerDown();
+                unsubPointerMove();
+                unsubTouchUpdate();
+                unsubTouchRemove();
             };
         });
 
