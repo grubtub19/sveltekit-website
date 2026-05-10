@@ -56,6 +56,9 @@
     }
 
     .peek-content {
+        position: absolute;
+        left: 0;
+        top: 0;
         /* Optimization: tells the browser this will move */
         will-change: transform;
     }
