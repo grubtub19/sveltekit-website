@@ -5,21 +5,11 @@
 	import PeekyElement from "$lib/components/PeekyElement.svelte";
 	import { peek } from "$lib/transitions/peek-transitions";
 	import { cubicOut } from "svelte/easing";
-	import { PHOTO_CONFIG } from "$lib/config/photo.js";
-
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	{@html `<style>
-		:root {
-			--photo-max-height: ${PHOTO_CONFIG.defaultHeight}px;
-			--photo-aspect-ratio: ${PHOTO_CONFIG.aspectRatio};
-			--photo-aspect-ratio-portrait: ${1 / PHOTO_CONFIG.aspectRatio};
-			--breakpoint-mobile: ${PHOTO_CONFIG.mobileBreakpoint}px;
-		}
-	</style>`}
 </svelte:head>
 
 {@render children()}

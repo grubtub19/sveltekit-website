@@ -1,22 +1,23 @@
 <script lang="ts">
   import type { PageProps } from './$types';
+  import { CardGrid, Card } from '$lib';
 
   let { data }: PageProps = $props();
 </script>
 
 <h1>All Blog Posts</h1>
 
-<div class="blog-list">
+<CardGrid>
   {#each data.posts as post (post.id)}
-    <a href="/blog/{post.slug}" class="blog-item">
+    <Card href="/blog/{post.slug}">
       {#if post.image}
-        <img class="blog-image" src={post.image} alt={post.title} />
+        <img src={post.image} alt={post.title} />
       {:else}
         <div class="placeholder">No Image</div>
       {/if}
 
-      <div class="blog-text">
-        <h3 class="blog-title">{post.title}</h3>
+      <div class="card-text">
+        <h3>{post.title}</h3>
         {#if post.date}
           <time datetime={post.date}>
             {new Date(post.date).toLocaleDateString(undefined, {
@@ -27,42 +28,6 @@
           </time>
         {/if}
       </div>
-    </a>
+    </Card>
   {/each}
-</div>
-
-<style>
-  .blog-list {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  .blog-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    border: green 2px solid;
-    flex-grow: 0;
-  }
-
-  .blog-image {
-    display: block;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 1;
-  }
-
-  .blog-text {
-    padding: 1rem;
-    margin: 0;
-  }
-
-  .blog-title {
-    margin-top: 0;
-  }
-</style>
+</CardGrid>

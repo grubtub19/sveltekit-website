@@ -15,8 +15,9 @@
 </article>
 
 <style>
-    :global(img) {
-        max-height: var(--photo-max-height);
+    article :global(img),
+    article :global(video) {
+        max-height: 400px;
         max-width: 100%;
         width: auto;
         height: auto;

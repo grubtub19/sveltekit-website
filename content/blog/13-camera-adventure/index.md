@@ -1,6 +1,6 @@
 ---
 title: "Japan Day 14: Camera Strap Adventure"
-date: 2025-12-25
+date: 2025-12-26
 img: "https://photos.valorant.nyc/photos/e32d2c1e-c64e-48a2-a91c-d220ba193a83"
 ---
 

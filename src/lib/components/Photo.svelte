@@ -1,76 +1,29 @@
 <script lang="ts">
-	import {
-		PHOTO_CONFIG,
-		DEFAULT_LANDSCAPE_WIDTH,
-		DEFAULT_PORTRAIT_WIDTH,
-	} from "$lib/config/photo.js";
+	import { PHOTO_CONFIG, DEFAULT_SIZES } from "$lib/config/photo.js";
 
 	interface Props {
-		/** Immich browser URL (e.g. "https://photos.valorant.nyc/photos/<id>") */
+		// Immich browser URL (or directly the UUID)
 		url: string;
 		alt?: string;
-		width?: string;
-
-		/** If true, sets 2:3 vertical aspect ratio (3:2 landscape is assumed by default) */
-		portrait?: boolean;
-
-		/**
-		 * For portrait photos only: allows the photo to expand to its full vertical height.
-		 * By default, portrait photos are capped to match landscape height (400px) to prevent vertical blowout.
-		 */
-		tall?: boolean;
-
-		/** Override asset size directly ('thumbnail' | 'preview' | 'original') */
+		/** Asset size tier to request from Immich: 'preview' (default), 'thumbnail', or 'original' */
 		size?: "thumbnail" | "preview" | "original";
+		/** Browser image loading strategy: 'lazy' (default) or 'eager' */
+		loading?: "lazy" | "eager";
+		/** Custom responsive sizes attribute */
+		sizes?: string;
+		class?: string;
 	}
 
 	let {
 		url,
 		alt = "",
-		width,
-		portrait = false,
-		tall = false,
 		size = "preview",
+		loading = "lazy",
+		sizes = DEFAULT_SIZES,
+		class: className = "",
 	}: Props = $props();
 
-	// 1. Extract UUID from the Immich URL
-	const id = $derived(url.match(/\/photos\/([^\s?#/]+)/)?.[1] ?? "");
-
-	// Warn at development time if 'tall' is passed without 'portrait'
-	$effect(() => {
-		if (tall && !portrait) {
-			console.warn(
-				`[<Photo />] Warning: 'tall' prop was specified for "${url}" without 'portrait'. 'tall' only applies to portrait photos.`,
-			);
-		}
-	});
-
-	// 2. Aspect ratio: reads from CSS variables (synced from photo.js)
-	const ratio = $derived(
-		portrait
-			? "var(--photo-aspect-ratio-portrait)"
-			: "var(--photo-aspect-ratio)",
-	);
-
-	// 3. For portraits: default to var(--photo-max-height); if 'tall', override with 'none'
-	const computedMaxHeight = $derived(
-		portrait && tall
-			? "none"
-			: portrait
-				? "var(--photo-max-height)"
-				: undefined,
-	);
-
-	// 4. Preload scanner sizes attribute:
-	// Automatically adapts to user width or orientation defaults
-	const computedSizes = $derived(
-		width
-			? width
-			: portrait && !tall
-				? `(max-width: ${PHOTO_CONFIG.mobileBreakpoint}px) 100vw, ${DEFAULT_PORTRAIT_WIDTH}px`
-				: `(max-width: ${PHOTO_CONFIG.mobileBreakpoint}px) 100vw, ${DEFAULT_LANDSCAPE_WIDTH}px`,
-	);
-
+	const id = $derived(url.match(/\/photos\/([^\s?#/]+)/)?.[1] ?? url);
 	const isOriginal = $derived(size === "original");
 	const src = $derived(`/api/photo/${id}?size=${size}`);
 	const srcset = $derived(
@@ -83,11 +36,16 @@
 <img
 	{src}
 	{srcset}
-	sizes={isOriginal ? undefined : computedSizes}
+	sizes={isOriginal ? undefined : sizes}
 	{alt}
-	loading="lazy"
+	{loading}
 	decoding="async"
-	style:width
-	style:max-height={computedMaxHeight}
-	style:aspect-ratio={ratio}
+	class="immich-photo {className}"
 />
+
+<style>
+	.immich-photo {
+		max-width: 100%;
+		height: auto;
+	}
+</style>

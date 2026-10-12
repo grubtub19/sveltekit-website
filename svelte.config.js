@@ -12,7 +12,8 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			$blog: 'content/blog'
+			$blog: 'content/blog',
+			$content: 'content'
 		}
 	},
 	preprocess: [vitePreprocess(), mdsvex({ 
