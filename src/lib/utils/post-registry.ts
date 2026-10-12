@@ -28,23 +28,32 @@ for (const path in postModules) {
     const id = parseInt(idMatch[1], 10);
 
     let resolvedImage = null;
-    console.log("path: " + path)
     if (metadata.img) {
-        const imageFileName = metadata.img.replace('./', '');
-        
-        // Find the image that is in the SAME path as the .md file
-        // path: "src/lib/blog/8-gyoen/post.md"
-        // folder: "src/lib/blog/8-gyoen"
-        const currentFolder = path.split('/').slice(0, -1).join('/');
-        
-        const imageEntry = Object.entries(imageModules).find(([imgPath]) => {
-            return imgPath.startsWith(currentFolder) && imgPath.endsWith(imageFileName);
-        });
+        // 1. Immich photo URL (e.g., https://photos.valorant.nyc/photos/<uuid> or /photos/<uuid>)
+        const immichMatch = metadata.img.match(/\/photos\/([a-f0-9-]+)/i);
+        if (immichMatch) {
+            resolvedImage = `/api/photo/${immichMatch[1]}?size=preview`;
+        } 
+        // 2. Relative local file (e.g., ./1-flight.jpg or ../assets/cover.png)
+        else if (metadata.img.startsWith('./') || metadata.img.startsWith('../')) {
+            const imageFileName = metadata.img.replace(/^\.\//, '');
+            
+            // Find the image that is in the SAME path as the .md file
+            const currentFolder = path.split('/').slice(0, -1).join('/');
+            
+            const imageEntry = Object.entries(imageModules).find(([imgPath]) => {
+                return imgPath.startsWith(currentFolder) && imgPath.endsWith(imageFileName);
+            });
 
-        if (imageEntry) {
-            resolvedImage = (imageEntry[1] as any).default;
-        } else {
-            console.warn(`[Registry] ID ${id} image not found in ${currentFolder}/${imageFileName}`);
+            if (imageEntry) {
+                resolvedImage = (imageEntry[1] as any).default;
+            } else {
+                console.warn(`[Registry] ID ${id} image not found in ${currentFolder}/${imageFileName}`);
+            }
+        } 
+        // 3. Fallback: arbitrary web URL or absolute path (e.g., https://example.com/pic.jpg or /banner.png)
+        else {
+            resolvedImage = metadata.img;
         }
     }
 

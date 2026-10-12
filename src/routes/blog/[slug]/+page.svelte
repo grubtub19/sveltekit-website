@@ -16,7 +16,7 @@
 
 <style>
     :global(img) {
-        max-height: 400px;
+        max-height: var(--photo-max-height);
         max-width: 100%;
         width: auto;
         height: auto;

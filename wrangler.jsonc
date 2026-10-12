@@ -13,9 +13,6 @@
 	"pages_build_output_dir": ".svelte-kit/cloudflare",
 	"observability": {
 		"enabled": true
-	},
-	"vars": {
-		"CLOUDFLARE_API_TOKEN": "V_d2VceDnsbg-Ea9snYBVMakjjd8UtxZWIB3Dkai"
 	}
 	/**
 	 * Smart Placement

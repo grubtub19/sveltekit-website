@@ -2,6 +2,7 @@ import adapter from "@sveltejs/adapter-cloudflare";
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import relativeImages from 'mdsvex-relative-images';
+import remarkImmichImages from './src/lib/plugins/remark-immich-images.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -16,6 +17,7 @@ const config = {
 	},
 	preprocess: [vitePreprocess(), mdsvex({ 
 		remarkPlugins: [
+			remarkImmichImages,
 			relativeImages
 		],
 		extensions: ['.svx', '.md'] })

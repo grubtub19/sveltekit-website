@@ -1,0 +1,34 @@
+/**
+ * Global Stylesheet & Design Invariants
+ */
+
+@import "./fonts.css";
+
+:root {
+	/* Core Palette */
+	--color-bg: black;
+	--color-text: white;
+	--color-accent: #2cff05;
+	/* Matrix green */
+
+	/* Typography */
+	--font-main: "Hiragino Maru Gothic Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	--font-display: "LumineSign", sans-serif;
+}
+
+html {
+	height: 100%;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-main);
+}
+
+body {
+	overflow: auto;
+	height: 100%;
+	margin: 0;
+}
+
+h1 {
+	color: var(--color-accent);
+}

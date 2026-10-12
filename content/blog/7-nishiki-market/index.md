@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 7: Nishiki Market"
 date: 2025-12-19
-img: "./7-nishiki3.jpg"
+img: "https://photos.valorant.nyc/photos/4ce71be9-cb42-401c-8540-835b71ea4524"
 ---
 
 # Blogging is soul sucking work so you better be happy
@@ -13,11 +13,11 @@ But this is nothing compared to the deraged level of detail I journalled in the 
 
 After a long morning in bed, I headed out on the town with a simple mission: buy an SD card for my new camera. As scoured the shopping district, an androgynous aura lured me into a designer clothing store and pilfered me for all I'm worth (I didn't take pictures but trust me).
 
-![Powerlines between buildings](./7-nishiki.jpg)
-![A bus with a Round1 sign in the background](./7-nishiki2.jpg)
+![Powerlines between buildings](https://photos.valorant.nyc/photos/d0270ed7-1870-44c5-9a6c-ea488d8a69af)
+![A bus with a Round1 sign in the background](https://photos.valorant.nyc/photos/937a8a68-224c-4bfa-853b-4c96b45d21f5)
 
 I met the gang at Nintendo Kyoto and spent a good $50 on gamecube stim toy gatcha. I also got a splatoon visor and a banana wallet.
 
-![Val wearing a Splatoon visor](./7-nishiki3.jpg)
+![Val wearing a Splatoon visor](https://photos.valorant.nyc/photos/4ce71be9-cb42-401c-8540-835b71ea4524)
 
 Sorry I forgot to take a lot of pictures today and I regret it.

@@ -1,7 +1,7 @@
 ---
 title: "Japan Day 12+13: #teamnosleep"
 date: 2025-12-24
-img: "./mcd.png"
+img: "https://photos.valorant.nyc/photos/8c4a09bd-98d5-42dc-b97f-4ea40cedaa12"
 ---
 
 # Hyperfixations
@@ -14,8 +14,12 @@ I've learned to embrace times like these. I no longer carry the same shame about
 
 In other news, McDonalds here is weird af. Would not recommend the shrimp burger if you have any amount of self respect.
 
-![POV you're Val eating at Japanese McDonalds](./mcd.png)
+![POV you're Val eating at Japanese McDonalds](https://photos.valorant.nyc/photos/8c4a09bd-98d5-42dc-b97f-4ea40cedaa12)
 
 Also they just have Brooklyn Brewery here super casually and it's like in every konbini ever.
 
-![Brooklyn Brewery Defender IPA](./beer.png)
+![Brooklyn Brewery Defender IPA](https://photos.valorant.nyc/photos/c6d71fa0-80a4-4ddc-b7ef-3f49e3da90c5)
+
+Here's the inside of some shop idk:
+
+![Lots of strange machinery with sticky notes all over it](https://photos.valorant.nyc/photos/3082f6de-340c-4a9d-847d-e454f9cbfc09)
